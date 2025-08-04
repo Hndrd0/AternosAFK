@@ -30,24 +30,12 @@ A Node.js Minecraft bot using mineflayer that maintains server activity through 
 - Command system for remote control
 - Status reporting and monitoring
 - Natural conversation patterns
+- When error occurs does not respond!!
 
 ✅ **Monitoring & Logging**
 - Detailed connection logs
 - Health and position monitoring
 - Uptime tracking
-- UptimeRobot integration for 24/7 operation
-- Error handling and reporting
-
-## Quick Start
-
-### 1. Installation
-
-The dependencies are already installed in this Replit environment. If running elsewhere:
-
-```bash
-# Install Node.js dependencies
-npm install mineflayer dotenv
-```
 
 ### 2. For Aternos Servers (Special Configuration)
 
@@ -101,7 +89,6 @@ The bot will automatically start an UptimeRobot endpoint for 24/7 operation.
 3. Your server address will be displayed as: `yourservername.aternos.me`
 
 ### Step 2: Configure the Bot
-1. Copy the Aternos template: `cp .env.aternos .env`
 2. Edit `.env` and replace `yourserver.aternos.me` with your actual server address
 3. Keep all other settings as they are (optimized for Aternos)
 
@@ -224,26 +211,3 @@ If you encounter problems:
 4. Review the troubleshooting section above
 
 For Aternos-specific issues, remember that bot usage violates their ToS and support may be limited.
-
-## UptimeRobot Integration
-
-Your bot includes built-in 24/7 uptime monitoring:
-
-### Automatic Setup
-- UptimeRobot endpoint starts automatically on port 5000
-- Health check URL: `https://your-repl-name.replit.app/health`
-- No additional configuration needed
-
-### Setting Up Monitoring
-1. Visit [uptimerobot.com](https://uptimerobot.com) and create a free account
-2. Add new HTTP(s) monitor with your Replit health check URL
-3. Set monitoring interval to 5 minutes
-4. Your bot will stay alive 24/7 as UptimeRobot pings it
-
-### Benefits
-- Prevents bot from sleeping
-- 24/7 continuous operation
-- Automatic monitoring and alerts
-- Works perfectly with Aternos servers
-
-See `UPTIME_SETUP.md` for detailed setup instructions.
